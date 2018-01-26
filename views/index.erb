@@ -1,0 +1,24 @@
+<%
+input = gets.chomp(" ").to_i
+lotto = 6.times.map{Random.rand(99)} 
+matches = [lotto] & [input] 
+num = matches.length 
+%>
+
+<title>Lottery</title>
+
+<body style="background-color:#dddddd;">
+<center>
+
+<h2>Please enter 6 numbers, separated by a space:</h2>
+
+<form>
+	<input type="integer" name="input" value="<%= input %"> Input Number <br>
+	<input type="submit" name="submit" value="Submit">
+</form>
+<br><br><br>
+
+
+</center>
+</body>
+</html>
