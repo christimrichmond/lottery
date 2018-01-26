@@ -1,0 +1,35 @@
+<%
+num1 = num1.to_i
+num2 = num2.to_i
+num3 = num3.to_i
+num4 = num4.to_i
+num5 = num5.to_i
+num6 = num6.to_i
+input = [num1, num2, num3, num4, num5, num6]
+lotto = 6.times.map{Random.rand(99)+1}
+matches = lotto & input
+num_match = matches.length
+
+# num_match = winner(input,lotto)
+# puts num_match
+
+if num_match == 6
+	result = "Congratulations! You have matched all numbers! You win a gazillion dollars!"
+elsif num_match == 5
+	result = "You have matched 5 numbers! You win $1,000"
+elsif num_match == 4
+	result = "You have matched 4 lotto numbers! You win $500"
+elsif num_match == 3
+	result = "You have matched 3 lotto numbers! You win $100"
+elsif num_match == 2
+	result = "You have matched 2 lotto numbers! You win $50"
+elsif num_match == 1
+	result = "You have only matched 1 lotto number. You are not a winner today."
+else
+	result = "You have not matched any numbers this time. Please play again!"
+end
+%>
+The winning lotto numbers are: <%= lotto %><br>
+Your numbers were: <%= input %><br>
+<%= result %>
+

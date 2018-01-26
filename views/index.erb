@@ -1,19 +1,19 @@
-<%
-input = gets.chomp(" ").to_i
-lotto = 6.times.map{Random.rand(99)} 
-matches = [lotto] & [input] 
-num = matches.length 
-%>
 
 <title>Lottery</title>
 
 <body style="background-color:#dddddd;">
 <center>
 
-<h2>Please enter 6 numbers, separated by a space:</h2>
+<h2>Please enter 6 numbers:</h2>
 
-<form>
-	<input type="integer" name="input" value="<%= input %"> Input Number <br>
+<form method="post" action="input">
+
+	<input type="integer" name="num1"> <br>
+	<input type="integer" name="num2"> <br>
+	<input type="integer" name="num3"> <br>
+	<input type="integer" name="num4"> <br>
+	<input type="integer" name="num5"> <br>
+	<input type="integer" name="num6"> <br>
 	<input type="submit" name="submit" value="Submit">
 </form>
 <br><br><br>
