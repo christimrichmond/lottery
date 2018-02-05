@@ -16,7 +16,7 @@ num6 = num6.to_i
 
 
 input = [num1, num2, num3, num4, num5, num6]
-lotto = 6.times.map{Random.rand(99)+1}
+lotto = 6.times.map{Random.rand(60)+1}
 matches = lotto & input
 num_match = matches.length
 
